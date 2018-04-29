@@ -5,10 +5,7 @@
 # Each configuration option enables a list of files.
 
 obj-$(CONFIG_CYPRESS_CYTTSP5_BUS) += cyttsp5_bus.o
-obj-$(CONFIG_TOUCHSCREEN_CYPRESS_CYTTSP5)	+= cyttsp5_core.o
-ifdef CONFIG_TOUCHSCREEN_CYPRESS_CYTTSP5
-obj-y += cyttsp5_platform.o
-endif
+obj-$(CONFIG_TOUCHSCREEN_CYPRESS_CYTTSP5)	+= cyttsp5_core.o cyttsp5_platform.o
 obj-$(CONFIG_TOUCHSCREEN_CYPRESS_CYTTSP5_I2C)	+= cyttsp5_i2c.o
 obj-$(CONFIG_TOUCHSCREEN_CYPRESS_CYTTSP5_SPI)	+= cyttsp5_spi.o
 obj-$(CONFIG_TOUCHSCREEN_CYPRESS_CYTTSP5_MT_A)	+= cyttsp5_mt_a.o

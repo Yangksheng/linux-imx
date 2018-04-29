@@ -21,7 +21,7 @@ config TOUCHSCREEN_CYPRESS_CYTTSP5
 if TOUCHSCREEN_CYPRESS_CYTTSP5
 
 config CYPRESS_CYTTSP5_BUS
-	bool "Cypress TTSP core bus"
+	tristate "Cypress TTSP core bus"
 	help
 	  This option enables support Cypress TTSP core bus.
 	  This support is needed for various device and drivers
@@ -29,7 +29,7 @@ config CYPRESS_CYTTSP5_BUS
 	  protocol.
 
 config TOUCHSCREEN_CYPRESS_CYTTSP5_DEVICETREE_SUPPORT
-	bool "Enable Device Tree support"
+	tristate "Enable Device Tree support"
 	depends on TOUCHSCREEN_CYPRESS_CYTTSP5 && OF
 	help
 	  This option enables support for device tree.

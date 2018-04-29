@@ -23,11 +23,4 @@
 
 #include <linux/of.h>
 
-#ifdef CONFIG_TOUCHSCREEN_CYPRESS_CYTTSP5_DEVICETREE_SUPPORT
 int cyttsp5_devtree_register_devices(struct device *adap_dev);
-#else
-static inline int cyttsp5_devtree_register_devices(struct device *adap_dev)
-{
-	return 0;
-}
-#endif

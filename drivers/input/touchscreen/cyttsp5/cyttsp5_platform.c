@@ -81,6 +81,7 @@ struct cyttsp5_loader_platform_data _cyttsp5_loader_platform_data = {
 	.ttconfig = &cyttsp5_ttconfig,
 	.flags = CY_LOADER_FLAG_NONE,
 };
+EXPORT_SYMBOL_GPL(_cyttsp5_loader_platform_data);
 
 int cyttsp5_xres(struct cyttsp5_core_platform_data *pdata,
 		struct device *dev)
@@ -99,6 +100,7 @@ int cyttsp5_xres(struct cyttsp5_core_platform_data *pdata,
 		pdata->rst_gpio, rc);
 	return rc;
 }
+EXPORT_SYMBOL_GPL(cyttsp5_xres);
 
 int cyttsp5_init(struct cyttsp5_core_platform_data *pdata,
 		int on, struct device *dev)
@@ -150,6 +152,7 @@ int cyttsp5_init(struct cyttsp5_core_platform_data *pdata,
 		__func__, rst_gpio, irq_gpio, rc);
 	return rc;
 }
+EXPORT_SYMBOL_GPL(cyttsp5_init);
 
 static int cyttsp5_wakeup(struct cyttsp5_core_platform_data *pdata,
 		struct device *dev, atomic_t *ignore_irq)
@@ -198,9 +201,12 @@ int cyttsp5_power(struct cyttsp5_core_platform_data *pdata,
 
 	return cyttsp5_sleep(pdata, dev, ignore_irq);
 }
+EXPORT_SYMBOL_GPL(cyttsp5_power);
 
 int cyttsp5_irq_stat(struct cyttsp5_core_platform_data *pdata,
 		struct device *dev)
 {
 	return gpio_get_value(pdata->irq_gpio);
 }
+EXPORT_SYMBOL_GPL(cyttsp5_irq_stat);
+MODULE_LICENSE("GPL");
