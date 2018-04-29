@@ -11,6 +11,18 @@
 
 / {
 	display-timings {
+		AUO800x600:AUOA104 {
+			clock-frequency = <40000000>;
+			hactive = <800>;
+			vactive = <600>;
+			hback-porch = <120>;
+			hfront-porch = <100>;
+			vback-porch = <10>;
+			vfront-porch = <8>;
+			hsync-len = <36>;
+			vsync-len = <10>;
+		};
+		
 		hsd1024x768: hsd100pxn1 {
 			clock-frequency = <65000000>;
 			hactive = <1024>;
