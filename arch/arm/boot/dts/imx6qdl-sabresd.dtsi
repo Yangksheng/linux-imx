@@ -76,8 +76,8 @@
 			"CPU-Capture", "Capture";
 		codec-master;
 		mux-int-port = <2>;
-		mux-ext-port = <3>;
-		hp-det-gpios = <&gpio7 8 1>;
+		mux-ext-port = <5>;
+		hp-det-gpios = <&gpio5 18 1>;
 		mic-det-gpios = <&gpio1 9 1>;
 	};
 
@@ -232,7 +232,7 @@
 	clock-frequency = <100000>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_i2c2>;
-	status = "disabled";
+	status = "okay";
 
 	hdmi: edid@50 {
 		compatible = "fsl,imx6-hdmi-i2c";
@@ -340,15 +340,16 @@
 				MX6QDL_PAD_NANDF_CS3__GPIO6_IO16 0x80000000
 				MX6QDL_PAD_SD3_DAT4__GPIO7_IO01	0x80000000
 				MX6QDL_PAD_SD3_DAT6__GPIO6_IO18	0x80000000
+				MX6QDL_PAD_CSI0_PIXCLK__GPIO5_IO18 0x80000000
 			>;
 		};
 
 		pinctrl_audmux: audmuxgrp {
 			fsl,pins = <
-				MX6QDL_PAD_CSI0_DAT7__AUD3_RXD		0x130b0
-				MX6QDL_PAD_CSI0_DAT4__AUD3_TXC		0x130b0
-				MX6QDL_PAD_CSI0_DAT5__AUD3_TXD		0x110b0
-				MX6QDL_PAD_CSI0_DAT6__AUD3_TXFS		0x130b0
+				MX6QDL_PAD_KEY_ROW1__AUD5_RXD		0x130b0
+				MX6QDL_PAD_KEY_COL0__AUD5_TXC		0x130b0
+				MX6QDL_PAD_KEY_ROW0__AUD5_TXD		0x110b0
+				MX6QDL_PAD_KEY_COL1__AUD5_TXFS		0x130b0
 			>;
 		};
 
@@ -401,8 +402,8 @@
 
 		pinctrl_i2c1: i2c1grp {
 			fsl,pins = <
-				MX6QDL_PAD_CSI0_DAT8__I2C1_SDA		0x4001b8b1
-				MX6QDL_PAD_CSI0_DAT9__I2C1_SCL		0x4001b8b1
+				MX6QDL_PAD_EIM_D28__I2C1_SDA		0x4001b8b1
+				MX6QDL_PAD_EIM_D21__I2C1_SCL		0x4001b8b1
 			>;
 		};
 
