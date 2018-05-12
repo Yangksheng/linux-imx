@@ -598,7 +598,7 @@ static int imx_wm8960_probe(struct platform_device *pdev)
 	if (ret)
 		goto fail;
 
-	data->card.late_probe = imx_wm8960_late_probe;
+//	data->card.late_probe = imx_wm8960_late_probe;
 
 	platform_set_drvdata(pdev, &data->card);
 	snd_soc_card_set_drvdata(&data->card, data);
